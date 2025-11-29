@@ -1,0 +1,8 @@
+python-dotenv
+azure-identity
+azure-ai-agents
+fastapi
+uvicorn
+requests
+beautifulsoup4
+pydantic

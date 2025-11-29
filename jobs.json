@@ -1,0 +1,23 @@
+[
+  {
+    "id": "291a0442-b01b-43eb-a0aa-d036ae7ebbce",
+    "job_role": "Data Scientist",
+    "status": "applied",
+    "summary": "Analyze large datasets and build predictive models.",
+    "source": "LinkedIn"
+  },
+  {
+    "id": "c0245ca4-5761-40d1-821b-8afe620fd72b",
+    "job_role": "Machine Learning Engineer",
+    "status": "interview scheduled",
+    "summary": "Develop and deploy ML models into production systems.",
+    "source": "Indeed"
+  },
+  {
+    "id": "d75f19e4-4f63-41a5-a331-1318fcb0615d",
+    "job_role": "AI Researcher",
+    "status": "applied",
+    "summary": "Research and implement cutting-edge AI algorithms.",
+    "source": "Company Website"
+  }
+]
