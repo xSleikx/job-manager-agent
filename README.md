@@ -29,6 +29,7 @@ https://microsoftlearning.github.io/mslearn-ai-agents/Instructions/03-agent-cust
   - `DELETE /with_jobID` – Delete job by ID
   - `DELETE /with_jobrole` – Delete job by role
   - `PUT /update_job_status_jobID` – Update job status by ID
+  - `...` - Additional endpoints for extended functionality
 
 - **Azure Agent Integration**
   - Automatically calls local functions for job management
