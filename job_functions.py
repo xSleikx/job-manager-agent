@@ -108,6 +108,37 @@ def update_status(job_id: str, status: str) -> dict:
             return job
     return {"error": "Job not found", "id": job_id}
 
+@app.put("/update_job_role_jobID")
+def update_job_role(job_id: str, job_role: str) -> dict:
+    jobs = read_jobs()
+    for job in jobs:
+        if job["id"] == job_id:
+            job["job_role"] = job_role
+            write_jobs(jobs)
+            return job
+    return {"error": "Job not found", "id": job_id}
+
+
+@app.put("/update_summary_jobID")
+def update_summary(job_id: str, summary: str) -> dict:
+    jobs = read_jobs()
+    for job in jobs:
+        if job["id"] == job_id:
+            job["summary"] = summary
+            write_jobs(jobs)
+            return job
+    return {"error": "Job not found", "id": job_id}
+
+@app.put("/update_source_jobID")
+def update_source(job_id: str, source: str) -> dict:
+    jobs = read_jobs()
+    for job in jobs:
+        if job["id"] == job_id:
+            job["source"] = source
+            write_jobs(jobs)
+            return job
+    return {"error": "Job not found", "id": job_id}
+
 # Fetch job details from the provided URL, Agent summarizes the content, and prepare data for storage in jobs.json
 def scrape_job_page(url: str) -> dict:
     try:
@@ -138,8 +169,11 @@ def scrape_job_page(url: str) -> dict:
 user_functions: Set[Callable[..., Any]] = {
     create_job,
     list_jobs,
-    update_status,
     scrape_job_page,
     delete_job_byid, # maybe one delete is enough
-    delete_job_byrole
+    delete_job_byrole,
+    update_status,
+    update_job_role,
+    update_source,
+    update_summary
 }
